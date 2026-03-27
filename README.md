@@ -35,6 +35,7 @@ It includes R implementations of the main algorithmic components inspired by the
 - For methodological details, please consult the original publications listed above.
 - There is no gurantee given that this package gets new updates or will be maintained in the future.
 - The original authors of the python implementation had no involvement in the R implementation. If you find bugs/issues please contact me (package maintainer) and not the original authors of ADTD.
+- some functions such as prop_metrics and sim_bulk_seurat_sce are new implementations not found in the python original.
 
 ## References
 
