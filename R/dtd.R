@@ -10,7 +10,9 @@ XYCtoTorch <- function(X_mat, Y_mat, C_mat) {
 
 C_est <- function(X, Y, gamma) {
   Gamma <- torch::torch_diag(gamma)
-  C_e <- torch::torch_linalg_inv(torch::torch_t(X) %*% Gamma %*% X) %*% torch::torch_t(X) %*% Gamma %*% Y
+  A <- torch::torch_mm(torch::torch_mm(torch::torch_t(X), Gamma), X)
+  B <- torch::torch_mm(torch::torch_mm(torch::torch_t(X), Gamma), Y)
+  C_e <- torch::linalg_solve(A, B)
   C_e <- torch::torch_clamp(C_e, min = 0)
   C_e
 }
