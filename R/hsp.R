@@ -324,7 +324,7 @@ plot_results <- function(results, title = NULL, path = NULL) {
 
   legend(
     "topright",
-    legend = c("Test Loss", "Std. deviation", expression(lambda[2]~min), expression(lambda[2]~1se)),
+    legend = c("Test Loss", "Std. deviation", expression(lambda[2]~min), expression(lambda[2]~"1se")),
     col = c("black", "steelblue", "black", "green3"),
     pch = c(16, 15, 16, 16),
     lty = c(1, NA, NA, NA),
